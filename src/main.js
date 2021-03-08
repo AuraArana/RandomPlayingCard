@@ -32,10 +32,16 @@ window.onload = function() {
     let indexSymbol = Math.floor(Math.random() * symbol.length);
     return symbol[indexSymbol];
   };
+  let RandomSymbol = generateRandomSymbol();
+  if (RandomSymbol == "&hearts;") {
+    // console.log(RandomSymbol);
+    document.querySelector(".top-symbol").className += " red";
+    document.querySelector(".bottom-symbol").className += " red";
+  }
 
-  document.querySelector(".top-symbol").innerHTML = generateRandomSymbol();
+  document.querySelector(".top-symbol").innerHTML = RandomSymbol;
   document.querySelector(".number").innerHTML = generateRandomNumber();
-  document.querySelector(".bottom-symbol").innerHTML = generateRandomSymbol();
+  document.querySelector(".bottom-symbol").innerHTML = RandomSymbol;
 
   //   console.log("Hello Rigo from the console!");
 };
