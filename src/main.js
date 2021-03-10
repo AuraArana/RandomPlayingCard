@@ -33,7 +33,7 @@ window.onload = function() {
     return symbol[indexSymbol];
   };
   let RandomSymbol = generateRandomSymbol();
-  if (RandomSymbol == "&hearts;") {
+  if (RandomSymbol == "&hearts;" || RandomSymbol == "&diams;") {
     // console.log(RandomSymbol);
     document.querySelector(".top-symbol").className += " red";
     document.querySelector(".bottom-symbol").className += " red";
